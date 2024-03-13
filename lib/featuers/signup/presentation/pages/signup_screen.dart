@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:graduation_project/config/routes/routes.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
@@ -111,20 +112,26 @@ class SignupScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 18,),
-              Container(
-                  padding: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                      color: Colors.orange[200],
-                      borderRadius: BorderRadius.circular(15)
-                  ),
-                  child:Center(
-                    child:Text("Sign Up",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 20,
+              InkWell(
+                onTap: (){
+                  Navigator.pushNamedAndRemoveUntil(context, RoutesName.home, (route) => false);
 
-                      ),),
-                  )
+                },
+                child: Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                        color: Colors.orange[200],
+                        borderRadius: BorderRadius.circular(15)
+                    ),
+                    child:Center(
+                      child:Text("Sign Up",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 20,
+
+                        ),),
+                    )
+                ),
               ),
 
 
