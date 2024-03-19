@@ -3,6 +3,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:graduation_project/models/category_model.dart';
+import 'package:graduation_project/screens/home/home_tab.dart';
+import 'package:graduation_project/screens/profile/profile_tab.dart';
+import 'package:graduation_project/screens/settings/settings_tab.dart';
+
 
 import '../../../../screens/categories_tab.dart';
 
@@ -12,15 +16,17 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int index=0;
+  int currentindex=0;
+  List<Widget>tabs=[ProfileTab(),HomeLayout(),SettingsTab(),];
 
   @override
   Widget build(BuildContext context) {
-    List<CategoryModel> categories=CategoryModel.getCategories();
+
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.blue[50],
       appBar: AppBar(
+        toolbarHeight: 80,
         backgroundColor: Colors.transparent,
         title: Text("Ready to Learn? ",
         style:
@@ -29,10 +35,18 @@ class _HomeScreenState extends State<HomeScreen> {
 
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton:FloatingActionButton(onPressed: (){},
+      floatingActionButton:FloatingActionButton(onPressed: (){
+       onTabTapped(1);
+      },
           child: Icon(Icons.home,color: Colors.blue[50],),
         backgroundColor: Colors.orange[400],
-        shape: CircleBorder(),
+        shape: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(50),
+          borderSide: BorderSide(
+            color: Colors.white,
+            width: 3
+          )
+        ),
 
       ) ,
       bottomNavigationBar: BottomAppBar(
@@ -42,22 +56,27 @@ class _HomeScreenState extends State<HomeScreen> {
         child: BottomNavigationBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
-          onTap: (value){
-            index=value;
-            setState(() {
-
-            });
-          },
-            currentIndex: index,
+          onTap: onTabTapped,
+            currentIndex: currentindex,
             items: [
-              BottomNavigationBarItem(icon: Icon(Icons.person,size: 20,), label: ""),
+              BottomNavigationBarItem(icon: Icon(Icons.person,size: 20), label: "",
+
+             ),
+              BottomNavigationBarItem(icon: Icon(Icons.home,size: 20,color: Colors.transparent,),label: ""),
               BottomNavigationBarItem(icon: Icon(Icons.settings,size: 20,),label: "")
+
 
             ]),
       ),
-      body: CategoriesTab(categories),
+      body: tabs[currentindex],
+
 
 
     );
+  }
+  onTabTapped(int index){
+    setState(() {
+      currentindex=index;
+    });
   }
 }
