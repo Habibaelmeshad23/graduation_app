@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:graduation_project/config/routes/routes.dart';
 import 'package:graduation_project/models/category_model.dart';
+import 'package:graduation_project/screens/num_tab.dart';
 
 class CategoryItem extends StatelessWidget {
   CategoryModel categoryModel;
@@ -25,7 +27,10 @@ class CategoryItem extends StatelessWidget {
             Text(categoryModel.name,style: TextStyle(
               fontSize: 18,color: Colors.orange[800],
               fontWeight: FontWeight.w600
-            ),)
+            ),),
+            Text(categoryModel.routes)
+
+
           ],
         ) ,
       ),

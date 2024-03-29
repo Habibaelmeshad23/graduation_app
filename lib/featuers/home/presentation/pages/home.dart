@@ -16,13 +16,14 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int currentindex=0;
+  int currentindex=1;
   List<Widget>tabs=[ProfileTab(),HomeLayout(),SettingsTab(),];
 
   @override
   Widget build(BuildContext context) {
 
     return Scaffold(
+      extendBody: true,
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.blue[50],
       appBar: AppBar(
@@ -63,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
              ),
               BottomNavigationBarItem(icon: Icon(Icons.home,size: 20,color: Colors.transparent,),label: ""),
-              BottomNavigationBarItem(icon: Icon(Icons.settings,size: 20,),label: "")
+              BottomNavigationBarItem(icon: Icon(Icons.settings_sharp,size: 20,),label: "")
 
 
             ]),
