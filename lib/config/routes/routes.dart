@@ -4,8 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:graduation_project/featuers/home/presentation/pages/home.dart';
 import 'package:graduation_project/featuers/login/presentation/pages/login_screen.dart';
 import 'package:graduation_project/featuers/signup/presentation/pages/signup_screen.dart';
+import 'package:graduation_project/screens/animal_tab.dart';
+import 'package:graduation_project/screens/games_tab.dart';
+import 'package:graduation_project/screens/jobs_tab.dart';
+import 'package:graduation_project/screens/letter_tab.dart';
+import 'package:graduation_project/screens/num_tab.dart';
 import 'package:graduation_project/screens/profile/profile_tab.dart';
 import 'package:graduation_project/screens/settings/settings_tab.dart';
+import 'package:graduation_project/screens/shapes_tab.dart';
 
 class RoutesName{
   static const String login="/";
@@ -13,6 +19,15 @@ class RoutesName{
   static const String profile="Profile";
   static const String home="Home";
   static const String settings="Settings";
+  static const String animalTab="AnimalTab";
+  static const String gamesTab="GamesTab";
+  static const String jobTab="JobsTab";
+  static const String letterTab="LettersTab";
+  static const String numTab="NumbersTab";
+  static const String shapeTab="ShapesTab";
+
+
+
 
 }
 
@@ -29,6 +44,24 @@ class AppRouter{
         return MaterialPageRoute(builder: (context) => ProfileTab());
       case RoutesName.settings:
         return MaterialPageRoute(builder: (context) => SettingsTab());
+      case RoutesName.numTab:
+        return MaterialPageRoute(builder: (context) => NumbersTab());
+      case RoutesName.letterTab:
+        return MaterialPageRoute(builder: (context) => LettersTab());
+      case RoutesName.shapeTab:
+        return MaterialPageRoute(builder: (context) => ShapesTab());
+      case RoutesName.animalTab:
+        return MaterialPageRoute(builder: (context) => AnimalsTab());
+      case RoutesName.gamesTab:
+        return MaterialPageRoute(builder: (context) => GamesTab());
+      case RoutesName.jobTab:
+        return MaterialPageRoute(builder: (context) => JobsTab());
+
+
+
+
+
+
 
       default:
         return MaterialPageRoute(builder: (context) => unDefineRoute());
@@ -44,4 +77,5 @@ class AppRouter{
       ),
     );
   }
+
 }

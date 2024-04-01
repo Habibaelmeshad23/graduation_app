@@ -65,7 +65,34 @@ class _SettingsTabState extends State<SettingsTab> {
 
                   ],
                 ),
+
             ),
+            SizedBox(height: 30,),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 20),
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              height: 50,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: Colors.orange)
+              ),
+              child: Row(
+                children: [
+                  Icon(Icons.email),
+                  SizedBox(width: 12,),
+                  Text("Contact Us",style: TextStyle(
+                      fontSize: 20,fontWeight: FontWeight.w500
+                  ),),
+                 Spacer(),
+                  Icon(Icons.arrow_forward,color: Colors.orange,
+                    size: 25,)
+
+                ],
+              ),
+              
+            ),
+            
+
 
           ],
         ),

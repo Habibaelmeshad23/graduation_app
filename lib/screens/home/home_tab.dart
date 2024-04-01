@@ -10,5 +10,8 @@ class HomeLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     List<CategoryModel> categories=CategoryModel.getCategories();
     return CategoriesTab(categories);
+
+
+
   }
 }

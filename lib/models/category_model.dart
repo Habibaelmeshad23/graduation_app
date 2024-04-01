@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:graduation_project/config/routes/routes.dart';
 import 'package:graduation_project/screens/animal_tab.dart';
 import 'package:graduation_project/screens/games_tab.dart';
 import 'package:graduation_project/screens/jobs_tab.dart';
@@ -18,12 +19,12 @@ class CategoryModel{
 
   static List<CategoryModel> getCategories(){
     return[
-      CategoryModel("Numbers", "assets/images/num.jpg",Colors.white,"" ),
-      CategoryModel("Letters", "assets/images/Unknown.jpg",Colors.white,""),
-      CategoryModel("Shapes", "assets/images/shapes.jpg",Colors.white,""),
-      CategoryModel("Animals", "assets/images/animals.jpg",Colors.white,""),
-      CategoryModel("Games", "assets/images/game.jpg",Colors.white,""),
-      CategoryModel("Jobs", "assets/images/jobs.jpg",Colors.white,""),
+      CategoryModel("Numbers", "assets/images/num.jpg",Colors.white,RoutesName.numTab ),
+      CategoryModel("Letters", "assets/images/Unknown.jpg",Colors.white,RoutesName.letterTab ),
+      CategoryModel("Shapes", "assets/images/shapes.jpg",Colors.white,RoutesName.shapeTab ),
+      CategoryModel("Animals", "assets/images/animals.jpg",Colors.white,RoutesName.animalTab ),
+      CategoryModel("Games", "assets/images/game.jpg",Colors.white,RoutesName.gamesTab  ),
+      CategoryModel("Jobs", "assets/images/jobs.jpg",Colors.white,RoutesName.jobTab ),
 
     ];
   }
