@@ -6,6 +6,7 @@ import 'package:graduation_project/models/category_model.dart';
 import 'package:graduation_project/screens/home/home_tab.dart';
 import 'package:graduation_project/screens/profile/profile_tab.dart';
 import 'package:graduation_project/screens/settings/settings_tab.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 
 import '../../../../screens/categories_tab.dart';

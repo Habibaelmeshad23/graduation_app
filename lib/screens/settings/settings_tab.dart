@@ -35,7 +35,7 @@ class _SettingsTabState extends State<SettingsTab> {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 20),
               padding: EdgeInsets.symmetric(horizontal: 20),
-              child: Text("Language",style: TextStyle(
+              child: Text("",style: TextStyle(
                   fontSize: 20,fontWeight: FontWeight.bold
               ),),
             ),
@@ -47,11 +47,23 @@ class _SettingsTabState extends State<SettingsTab> {
               width:double.infinity ,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
-                border: Border.all(color: Colors.orange)
+                border: Border.all(color: Colors.orange),
+                color: Colors.blue[50],
+                  boxShadow:[
+                    BoxShadow(
+                        color: Colors.blueGrey.shade200,
+                        offset: Offset(2.0, 2.0),
+                        blurRadius: 10,
+                        spreadRadius: 1
+                    ),
+                  ]
+
               ),
                 child: Row(
                   children: [
-                    Text("English",style: TextStyle(
+                    Icon(Icons.language),
+                    SizedBox(width: 8,),
+                    Text("Language",style: TextStyle(
                       fontSize: 20,fontWeight: FontWeight.w500
                     ),),
                     Spacer(),
@@ -74,18 +86,27 @@ class _SettingsTabState extends State<SettingsTab> {
               height: 50,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.orange)
+                  border: Border.all(color: Colors.orange),
+                  color: Colors.blue[50],
+                  boxShadow:[
+                    BoxShadow(
+                        color: Colors.blueGrey.shade200,
+                        offset: Offset(2.0, 2.0),
+                        blurRadius: 10,
+                        spreadRadius: 1
+                    ),
+                  ]
               ),
               child: Row(
                 children: [
                   Icon(Icons.email),
-                  SizedBox(width: 12,),
+                  SizedBox(width: 8,),
                   Text("Contact Us",style: TextStyle(
                       fontSize: 20,fontWeight: FontWeight.w500
                   ),),
                  Spacer(),
-                  Icon(Icons.arrow_forward,color: Colors.orange,
-                    size: 25,)
+                  Icon(Icons.arrow_drop_down,color: Colors.orange,
+                    size: 30,)
 
                 ],
               ),

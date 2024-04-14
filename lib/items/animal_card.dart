@@ -6,8 +6,12 @@ class AnimalCard extends StatelessWidget {
   final String name;
   final String image;
   final String food;
+  final String home;
+  final String span;
 
-   AnimalCard( this.name,  this.image,this.food);
+
+
+  AnimalCard( this.name,  this.image,this.food,this.home,this.span);
 
 
   @override
@@ -40,13 +44,24 @@ class AnimalCard extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(18),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(name,style: TextStyle(
+                  Text(name, style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 20
+                      fontSize: 20,color: Colors.orange[800],
+
                   ),textAlign: TextAlign.left,
                   ),
-                  Text("Food: $food",textAlign: TextAlign.end,)
+                  Text("Food: $food",style: TextStyle(
+                    fontWeight: FontWeight.w500,color: Colors.orange[600],
+                  ),),
+                  Text("Home: $home",style: TextStyle(
+                      fontWeight: FontWeight.w500,color: Colors.orange[600],
+                  ),),
+                  Text("LifeSpan: $span",style: TextStyle(
+                      fontWeight: FontWeight.w500,color: Colors.orange[600],
+                  ),)
+
                 ],
               ),
             )
