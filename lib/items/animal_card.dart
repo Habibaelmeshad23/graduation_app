@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -47,11 +48,13 @@ class AnimalCard extends StatelessWidget {
                   ),textAlign: TextAlign.left,
                   ),
                   Text("Food: $food",textAlign: TextAlign.end,)
+
+
+
                 ],
               ),
             )
           ],
-
         ),
       ),
     );

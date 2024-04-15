@@ -29,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         toolbarHeight: 80,
         backgroundColor: Colors.transparent,
-        title: Text("Ready to Learn? ",
+        title: Text("Profile ",
         style:
         GoogleFonts.merriweather(color: Colors.orange[700],
             textStyle:TextStyle(fontSize: 28),fontWeight: FontWeight.w600 ),),
