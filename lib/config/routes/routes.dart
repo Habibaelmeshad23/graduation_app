@@ -13,6 +13,8 @@ import 'package:graduation_project/screens/profile/profile_tab.dart';
 import 'package:graduation_project/screens/settings/settings_tab.dart';
 import 'package:graduation_project/screens/shapes_tab.dart';
 
+import '../../video_player_widget.dart';
+
 class RoutesName{
   static const String login="/";
   static const String signup="signup";
@@ -25,6 +27,7 @@ class RoutesName{
   static const String letterTab="LettersTab";
   static const String numTab="NumbersTab";
   static const String shapeTab="ShapesTab";
+  static const String videoTab="VideoPlayerWidget";
 
 
 
@@ -56,6 +59,8 @@ class AppRouter{
         return MaterialPageRoute(builder: (context) => GamesTab());
       case RoutesName.jobTab:
         return MaterialPageRoute(builder: (context) => JobsTab());
+      case RoutesName.videoTab:
+        return MaterialPageRoute(builder: (context) => VideoPlayerWidget());
 
 
 

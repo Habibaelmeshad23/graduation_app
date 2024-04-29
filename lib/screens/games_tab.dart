@@ -1,6 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:graduation_project/items/games_card.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class GamesTab extends StatelessWidget {
   final myItems=[
@@ -22,14 +24,14 @@ class GamesTab extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
-          title: Text("Games"),
+          title: Text(AppLocalizations.of(context)!.games),
         ),
         body: ListView(
           children: [
             SizedBox(height: 20,),
             CarouselSlider(items: [
               Container(
-                margin: EdgeInsets.all(8),
+                margin: EdgeInsets.all(5),
                 decoration: BoxDecoration(
                  image: DecorationImage(
                      image: AssetImage("assets/images/kids1.jpg"),
@@ -39,7 +41,7 @@ class GamesTab extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: EdgeInsets.all(8),
+                margin: EdgeInsets.all(5),
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage("assets/images/kids2.jpg"),
@@ -49,7 +51,7 @@ class GamesTab extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: EdgeInsets.all(8),
+                margin: EdgeInsets.all(5),
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage("assets/images/kids3.jpg"),
@@ -66,9 +68,19 @@ class GamesTab extends StatelessWidget {
               autoPlayAnimationDuration: Duration(milliseconds: 700),
               enlargeCenterPage: true,
               enlargeFactor: 0.5
-            ))
+            )),
+           SizedBox(height: 10,),
+           
+           GamesCard("assets/images/game1.jpg","Maze for Kids - Find Exit","Make original mazes!",),
+            GamesCard("assets/images/color.jpg","colouring&Drawing for kids","Baby Toddler painting Games"),
+            GamesCard("assets/images/panda.jpg","Baby Panda's Glow","Doodle Game"),
+            GamesCard("assets/images/piano.jpg","Baby piano for kids","Sounds&music games for kids")
+
+
+
           ],
-        )
+        ),
+
         
 
       ),
