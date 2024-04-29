@@ -96,7 +96,6 @@ class _NumbersTabState extends State<NumbersTab> {
               color: Colors.white,
               boxShadow: [
                 BoxShadow(
-
                   color: Colors.pink[100]!.withOpacity(0.5),
                   spreadRadius: 2,
                   blurRadius: 7,
