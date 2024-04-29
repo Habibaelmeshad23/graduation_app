@@ -1,4 +1,6 @@
-import 'dart:ui';
+
+
+
 
 import 'package:flutter/material.dart';
 import 'package:graduation_project/config/routes/routes.dart';
@@ -8,6 +10,8 @@ import 'package:graduation_project/screens/jobs_tab.dart';
 import 'package:graduation_project/screens/letter_tab.dart';
 import 'package:graduation_project/screens/num_tab.dart';
 import 'package:graduation_project/screens/shapes_tab.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class CategoryModel{
   String name;

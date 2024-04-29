@@ -6,6 +6,7 @@ import 'package:graduation_project/models/category_model.dart';
 import 'package:graduation_project/screens/home/home_tab.dart';
 import 'package:graduation_project/screens/profile/profile_tab.dart';
 import 'package:graduation_project/screens/settings/settings_tab.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 
 import '../../../../screens/categories_tab.dart';
@@ -29,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         toolbarHeight: 80,
         backgroundColor: Colors.transparent,
-        title: Text("Ready to Learn? ",
+        title: Text(AppLocalizations.of(context)!.learn,
         style:
         GoogleFonts.merriweather(color: Colors.orange[700],
             textStyle:TextStyle(fontSize: 28),fontWeight: FontWeight.w600 ),),
