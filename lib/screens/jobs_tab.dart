@@ -10,7 +10,18 @@ class JobsTab extends StatelessWidget {
     'Farmer',
     'Dentist',
     'Fireman',
-    'Mechanic'
+    'Pilot'
+  ];
+  final List place=[
+    'work in: School',
+    'work in: Court',
+    'work in: Hospital',
+    'work in: Field',
+    'work in: Clinic',
+    'work in: m',
+    'work in: Airport',
+
+
   ];
   List<String>image=[
     "assets/images/teacher.jpeg",
@@ -18,8 +29,8 @@ class JobsTab extends StatelessWidget {
     "assets/images/doctor.jpeg",
     "assets/images/farm.jpeg",
     "assets/images/dentist.jpeg",
-    "assets/images/fire.jpeg",
-    "assets/images/mech.jpeg",
+    "assets/images/fire.jpg",
+    "assets/images/pilot.jpg",
   ];
   final List card1=[
     'Singer',
@@ -30,10 +41,20 @@ class JobsTab extends StatelessWidget {
     'Engineer',
     'Nurse'
   ];
+  final List place1=[
+    'work in: theater',
+    'work in: School',
+    'work in: Cafe',
+    'work in: Hotel',
+    'work in: Clinic',
+    'work in: Company',
+    'work in: Hospital',
+
+  ];
 
   List<String>image1=[
     "assets/images/singer.jpeg",
-    "assets/images/student.jpeg",
+    "assets/images/stu.jpg",
     "assets/images/waiter.jpeg",
     "assets/images/chef.jpeg",
     "assets/images/vit.jpeg",
@@ -41,6 +62,7 @@ class JobsTab extends StatelessWidget {
     "assets/images/nurse.jpeg",
 
   ];
+
 
   @override
   Widget build(BuildContext context) {
@@ -62,8 +84,10 @@ class JobsTab extends StatelessWidget {
                 return JobCard(
                   card[index],
                   image[index],
+                  place[index],
                   card1[index],
                   image1[index],
+                  place1[index],
                 );
               })
 

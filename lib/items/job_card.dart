@@ -6,8 +6,12 @@ class JobCard extends StatelessWidget {
   final String image;
   final String child1;
   final String image1;
+  final String work;
+  final String work1;
 
-  const JobCard( this.child, this.image,  this.child1,  this.image1,  );
+
+
+  const JobCard( this.child, this.image,this.work,  this.child1,  this.image1,this.work1  );
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +28,17 @@ class JobCard extends StatelessWidget {
                 Expanded(
                   flex: 2,
                   child: Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Text(
-                      child,
-                      style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),
+                    padding: EdgeInsets.all(20),
+                    child: Column(
+                      children: [
+                        Text(
+                          child,
+                          style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),
+                          textAlign: TextAlign.left,
+                        ),
+                        Text(work,style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold) ,
+                          textAlign: TextAlign.left,),
+                      ],
                     ),
                   ),
                 ),
@@ -54,10 +65,17 @@ class JobCard extends StatelessWidget {
                 Expanded(
                   flex: 2,
                   child: Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Text(
-                      child1,
-                      style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),
+                    padding: EdgeInsets.all(17),
+                    child: Column(
+                      children: [
+                        Text(
+                          child1,
+                          style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),
+                          textAlign: TextAlign.right,
+                        ),
+                        Text(work1,style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold) ,
+                          textAlign: TextAlign.left,),
+                      ],
                     ),
                   ),
                 ),
