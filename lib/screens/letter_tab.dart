@@ -1,13 +1,16 @@
 import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class LettersTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Letters ',style: TextStyle(fontSize:25,fontWeight: FontWeight.w500 ),),
+        title: Text(AppLocalizations.of(context)!.letters,style:
+        TextStyle(fontSize:25,fontWeight: FontWeight.w500,color: Colors.pink ),),
       ),
       body: AvatarList(),
     );

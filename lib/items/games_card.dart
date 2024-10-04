@@ -1,13 +1,21 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-class GamesCard extends StatelessWidget {
+class GamesCard extends StatefulWidget {
   final String image;
   final String text1;
   final String text2;
 
    GamesCard(this.image, this.text1, this.text2);
+
+  @override
+  State<GamesCard> createState() => _GamesCardState();
+}
+
+class _GamesCardState extends State<GamesCard> {
+  final linkUri=Uri.parse("https://play.google.com/store/apps/details?id=com.rvappstudios.shapes.colors.toddler&pli=1");
 
   @override
   Widget build(BuildContext context) {
@@ -32,22 +40,29 @@ class GamesCard extends StatelessWidget {
         ),
         child: Row(
           children: [
-            Container(
+            InkWell(
+              onTap:(){
+                setState(() { launchUrl(linkUri,
+                    mode: LaunchMode.externalApplication);
+                });
 
-                height: 85,
-                margin: EdgeInsets.symmetric(horizontal: 10),
-                padding: EdgeInsets.symmetric(horizontal: 10),
-                child: Image.asset(image),
+              },
+              child: Container(
+                  height: 85,
+                  margin: EdgeInsets.symmetric(horizontal: 10),
+                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  child: Image.asset(widget.image),
+              ),
             ),
             SizedBox(width: 10,),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(text1,style: TextStyle(
+                Text(widget.text1,style: TextStyle(
                   fontWeight: FontWeight.bold,fontSize: 16
                 ),),
-                Text(text2)
+                Text(widget.text2)
               ],
             ),
 

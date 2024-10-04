@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class NumbersTab extends StatefulWidget {
 
@@ -51,7 +53,7 @@ class _NumbersTabState extends State<NumbersTab> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: Text(
-          'Numbers',
+          AppLocalizations.of(context)!.numbers,
           style: TextStyle(fontSize: 28,color: Colors.pink),
         ),
       ),

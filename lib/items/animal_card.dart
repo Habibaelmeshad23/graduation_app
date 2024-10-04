@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:graduation_project/config/routes/routes.dart';
 
-import '../video_player_widget.dart';
 
 
 class AnimalCard extends StatefulWidget {
@@ -86,7 +85,6 @@ class _AnimalCardState extends State<AnimalCard> {
                     ),
                     child: InkWell(
                       onTap: (){
-                       Navigator.pushNamed(context, RoutesName.videoTab);
                       },
                         child: Icon(Icons.play_circle,size: 25,color:Colors.white ,)),
                   )

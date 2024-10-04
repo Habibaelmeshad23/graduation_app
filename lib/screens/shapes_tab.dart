@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../items/shapes_card.dart';
 
@@ -52,7 +53,7 @@ class ShapesTab extends StatelessWidget {
         ),
         child: Scaffold(
             appBar: AppBar(
-              title: Text("Shapes",style: TextStyle(
+              title: Text(AppLocalizations.of(context)!.shapes,style: TextStyle(
                   fontSize:30,fontWeight: FontWeight.w500 ),),
             ),
             backgroundColor: Colors.transparent,

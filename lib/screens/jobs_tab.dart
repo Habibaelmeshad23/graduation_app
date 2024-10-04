@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:graduation_project/items/job_card.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class JobsTab extends StatelessWidget {
   final List card=[
@@ -74,7 +76,7 @@ class JobsTab extends StatelessWidget {
       ),
       child: Scaffold(
           appBar: AppBar(
-            title: Text("Jobs", style: TextStyle(fontSize:40,fontWeight: FontWeight.w500 ,),
+            title: Text(AppLocalizations.of(context)!.jobs, style: TextStyle(fontSize:35,fontWeight: FontWeight.w500 ,),
               textAlign: TextAlign.center,),
           ),
           backgroundColor: Colors.transparent,
